@@ -149,6 +149,8 @@ module API
             note: params[:note],
             blockchain_key: blockchain_key
 
+          Rails.logger.debug "Custom withdraw #{withdraw}"
+
           if beneficiary.present?
             withdraw.beneficiary = beneficiary
           else
